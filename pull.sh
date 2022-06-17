@@ -15,6 +15,7 @@ function backup_dotfiles {
     cp -rv "$CONFIG_DIR/alacritty" $LOCAL_CONFIG
     cp -rv "$CONFIG_DIR/rofi" $LOCAL_CONFIG
     cp -rv "$CONFIG_DIR/polybar" $LOCAL_CONFIG
+    cp -rv "$CONFIG_DIR/picom.conf" $LOCAL_CONFIG
     cp -rv "$HOME/.zshrc" $DOTFILES_DIR
     cp -rv "$HOME/.zsh" $DOTFILES_DIR
     cp -rv "$HOME/.tmux.conf" $DOTFILES_DIR
