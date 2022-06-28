@@ -1,6 +1,6 @@
 require('gitsigns').setup{}
 vim.cmd[[let g:rainbow_active = 1]]
-vim.cmd[[colorscheme material]]
+--vim.cmd[[colorscheme material]]
 vim.cmd[[let g:fzf_layout = { 'down': '40%' }]]
 vim.cmd("let g:polyglot_disabled = ['markdown', 'yaml']")
 vim.opt.scrollback = 0
@@ -27,10 +27,6 @@ vim.opt.signcolumn = "yes"
 vim.opt.number = true
 vim.cmd[[autocmd BufReadPost * if @% !~# '\.git[\/\\]COMMIT_EDITMSG$' && line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif]]
 vim.cmd[[map gf :e <cfile><CR>]]
---vim.cmd[[inoremap <silent><expr> <TAB> pumvisible() ? "<C-n>" : coc#refresh()]]
---vim.cmd[[inoremap <expr><S-TAB> pumvisible() ? "<C-p>" : "<C-h>"]]
---vim.cmd[[inoremap <silent><expr> <c-space> coc#refresh()]]
---vim.cmd[[inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm() : "<C-g>u<CR><c-r>=coc#on_enter()<CR>" ]]
 vim.diagnostic.config({ virtual_text = false })
 vim.cmd[[let g:nnn#layout = { 'down': '100%' }]]
 
@@ -38,11 +34,9 @@ vim.cmd[[let g:nnn#layout = { 'down': '100%' }]]
 vim.o.updatetime = 250
 vim.cmd[[autocmd CursorHold,CursorHoldI * lua vim.diagnostic.open_float(nil, {focus=false})]]
 
---vim.cmd[[autocmd BufReadPost *.docx :%!pandoc -f docx -t markdown]]
---vim.cmd[[autocmd BufWritePost *.docx :!pandoc -f markdown -t docx % > tmp.docx]]
+
+
 require'nvim-autopairs'.setup{}
-
-
 cfg = {
     toggle_key = '<M-r>'
 }

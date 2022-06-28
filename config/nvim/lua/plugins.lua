@@ -26,20 +26,19 @@ return require('packer').startup(function()
     use 'mcchrish/nnn.vim'
     -- UI/UX
     use 'kyazdani42/nvim-web-devicons'
-    use 'alexmalder/material.nvim'
     use 'alexmalder/galaxyline.nvim'
     use 'luochen1990/rainbow'
     use 'sbdchd/neoformat'
-    --use 'vim-autoformat/vim-autoformat'
     use 'windwp/nvim-autopairs'
     use 'junegunn/fzf'
     use 'junegunn/fzf.vim'
     use 'bfrg/vim-cpp-modern'
     use 'makerj/vim-pdf'
     use 'saltstack/salt-vim'
+    use 'towolf/vim-helm'
     use 'sjbach/lusty'
     use 'tpope/vim-surround'
     use 'tpope/vim-repeat'
-    use 'gonzaloserrano/vim-markdown-todo'
+    use 'skywind3000/asyncrun.vim'
     use { 'lewis6991/gitsigns.nvim', requires = { 'nvim-lua/plenary.nvim' } }
 end)

@@ -32,10 +32,11 @@ exec --no-startup-id xfce4-power-manager
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+exec --no-startup-id gnome-keyring-daemon -r -d
 
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
-exec feh --bg-scale ~/.config/i3/arch.jpg
+exec feh --bg-scale ~/.config/i3/purple-19.jpg
 exec syndaemon -i 0.7
 exec picom --experimental-backend
 
@@ -100,21 +101,21 @@ bindsym $mod+h split h
 # change container layout (stacked, tabbed, toggle split)
 #bindsym $mod+s layout stacking
 #bindsym $mod+w layout tabbed
-bindsym $mod+w $circle -t qutebrowser -c " web"
-bindsym $mod+q $circle -t qtcreator -c " dev"
-bindsym $mod+x $circle -t alacritty -c " term"
-bindsym $mod+v $circle -t virt-manager -c " vm"
-bindsym $mod+d $circle -t drawio -c " draw"
-bindsym $mod+1 $circle -t code -c " dev"
-bindsym $mod+t $circle -t telegram-desktop -c " tg"
-bindsym $mod+f $circle -t thunar -c " files"
-bindsym $mod+e $circle -t evolution -c "@ evo"
-bindsym $mod+o $circle -t wps -c " doc"
-bindsym $mod+z $circle -t zoom -c zoom
+bindsym $mod+w $circle -t qutebrowser -o qutebrowser -c " web"
+bindsym $mod+q $circle -t qtcreator -o qtcreator -c " dev"
+bindsym $mod+x $circle -t alacritty -o alacritty -c " term" 
+bindsym $mod+2 $circle -t "k8s-test" -o "alacritty --class k8s-test -e ssh -p 10022 root@192.168.13.45" -c " k8s"
+#bindsym $mod+v $circle -t virt-manager -c " vm"
+bindsym $mod+v $circle -t vault -o vault -c " vault"
+bindsym $mod+d $circle -t drawio -o drawio -c " draw"
+bindsym $mod+1 $circle -t code -o code -c " dev"
+bindsym $mod+t $circle -t telegram-desktop -o telegram-desktop -c " tg"
+bindsym $mod+f $circle -t nautilus -o nautilus -c " files"
+bindsym $mod+e $circle -t evolution -o evolution -c "@ evo"
+bindsym $mod+o $circle -t wps -o wps -c " doc"
+bindsym $mod+z $circle -t zoom -o zoom -c zoom
 bindsym $mod+Shift+w move container to workspace " web"
 bindsym $mod+Shift+x move container to workspace " term"
-#bindsym $mod+k $circle -t keepass
-#bindsym $mod+t $circle -t transmission-gtk
 #bindsym $mod+e layout toggle split
 # screenshot
 bindsym $mod+Shift+p exec deepin-screenshot
@@ -144,7 +145,7 @@ set $ws4 "4"
 
 # switch to workspace
 #bindsym $mod+1 workspace number $ws1
-bindsym $mod+2 workspace number $ws2
+#bindsym $mod+2 workspace number $ws2
 bindsym $mod+3 workspace number $ws3
 bindsym $mod+4 workspace number $ws4
 

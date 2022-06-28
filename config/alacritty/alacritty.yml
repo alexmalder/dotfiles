@@ -11,11 +11,7 @@ window:
   decorations: none
   dynamic_padding: false
   startup_mode: Maximized
-
-  #decorations: false
-
-window:
-  opacity: 0.9
+  opacity: 0.94
 
 dpi:
   x: 96.0
