@@ -101,7 +101,7 @@ hi(0, 'Visual', {bg = visu, fg = ops3, bold=true})
 hi(0, 'WarningMsg', {bg = 'NONE', fg = norm})
 hi(0, 'WildMenu', {bg = dark, fg = incl})
 
-hi(0, 'TabLineFill', {bg = ops2, fg = bclr})
+hi(0, 'TabLineFill', {bg = bclr, fg = culc})
 hi(0, 'TabLine', {bg = bclr, fg = drk2, nil})
 hi(0, 'TabLineSel', {bg = visu, fg = drk2, nil})
 

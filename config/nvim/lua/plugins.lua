@@ -35,10 +35,10 @@ return require('packer').startup(function()
     use 'bfrg/vim-cpp-modern'
     use 'makerj/vim-pdf'
     use 'saltstack/salt-vim'
-    use 'towolf/vim-helm'
     use 'sjbach/lusty'
     use 'tpope/vim-surround'
     use 'tpope/vim-repeat'
     use 'skywind3000/asyncrun.vim'
     use { 'lewis6991/gitsigns.nvim', requires = { 'nvim-lua/plenary.nvim' } }
+    use 'romgrk/barbar.nvim'
 end)

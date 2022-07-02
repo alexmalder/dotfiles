@@ -110,10 +110,12 @@ bindsym $mod+v $circle -t vault -o vault -c " vault"
 bindsym $mod+d $circle -t drawio -o drawio -c " draw"
 bindsym $mod+1 $circle -t code -o code -c " dev"
 bindsym $mod+t $circle -t telegram-desktop -o telegram-desktop -c " tg"
-bindsym $mod+f $circle -t nautilus -o nautilus -c " files"
+#bindsym $mod+f $circle -t nautilus -o nautilus -c " files"
+bindsym $mod+f $circle -t firefox -o firefox -c " web"
 bindsym $mod+e $circle -t evolution -o evolution -c "@ evo"
 bindsym $mod+o $circle -t wps -o wps -c " doc"
 bindsym $mod+z $circle -t zoom -o zoom -c zoom
+bindsym $mod+p $circle -t postman -o postman -c postman
 bindsym $mod+Shift+w move container to workspace " web"
 bindsym $mod+Shift+x move container to workspace " term"
 #bindsym $mod+e layout toggle split

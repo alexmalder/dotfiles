@@ -8,7 +8,7 @@ LOCAL_CONFIG="config"
 function backup_dotfiles {
     mkdir -p $LOCAL_CONFIG
     mkdir -p $DOTFILES_DIR
-    #cp -rv "/etc/modprobe.d" $DOTFILES_DIR
+    cp -rv "/etc/modprobe.d" $LOCAL_CONFIG
     cp -rv "$CONFIG_DIR/qutebrowser" $LOCAL_CONFIG
     cp -rv "$CONFIG_DIR/i3" $LOCAL_CONFIG
     cp -rv "$CONFIG_DIR/nvim" $LOCAL_CONFIG
