@@ -5,7 +5,7 @@ source "$XDG_CONFIG_HOME/zi/zi.zsh"
 if ! xset q &>/dev/null; then
     echo "X server starting..."
     startx
-#else
+else
     #tmux attach -t term || tmux new -s term > /dev/null
 fi
 

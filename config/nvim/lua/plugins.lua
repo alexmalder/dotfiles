@@ -25,8 +25,9 @@ return require('packer').startup(function()
     use 'williamboman/nvim-lsp-installer'
     use 'mcchrish/nnn.vim'
     -- UI/UX
+    use 'windwp/windline.nvim'
     use 'kyazdani42/nvim-web-devicons'
-    use 'alexmalder/galaxyline.nvim'
+    --use 'alexmalder/galaxyline.nvim'
     use 'luochen1990/rainbow'
     use 'sbdchd/neoformat'
     use 'windwp/nvim-autopairs'

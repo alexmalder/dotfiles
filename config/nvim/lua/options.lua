@@ -41,3 +41,14 @@ cfg = {
     toggle_key = '<M-r>'
 }
 require'lsp_signature'.setup{cfg}
+
+require('wlsample.vscode')
+local git_comps = require('windline.components.git')
+-- syntax using table
+local git_branch = {
+    text = git_comps.git_branch(),
+    hl_colors = {'white','black'},
+    width = 100,
+}
+
+require('wlsample.vscode')

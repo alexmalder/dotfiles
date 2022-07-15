@@ -25,6 +25,7 @@ font pango:Iosevka 10
 exec --no-startup-id dex --autostart --environment i3
 exec --no-startup-id XDG_CONFIG_HOME=$HOME/.config polybar
 exec --no-startup-id xfce4-power-manager
+exec --no-startup-id setxkbmap -option ctrl:swapcaps
 
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.
@@ -101,23 +102,26 @@ bindsym $mod+h split h
 # change container layout (stacked, tabbed, toggle split)
 #bindsym $mod+s layout stacking
 #bindsym $mod+w layout tabbed
-bindsym $mod+w $circle -t qutebrowser -o qutebrowser -c " web"
-bindsym $mod+q $circle -t qtcreator -o qtcreator -c " dev"
-bindsym $mod+x $circle -t alacritty -o alacritty -c " term" 
-bindsym $mod+2 $circle -t "k8s-test" -o "alacritty --class k8s-test -e ssh -p 10022 root@192.168.13.45" -c " k8s"
+bindsym $mod+x $circle -t "localterm" -o "alacritty --class localterm" -c "term" 
+bindsym $mod+k $circle -t "k8s-test" -o "alacritty --class k8s-test -e ssh -p 10022 root@192.168.13.45" -c "k8s"
+#bindsym $mod+t $circle -t "tg" -o "alacritty --class tg -e telegram-cli" -c " tg"
+bindsym $mod+w $circle -t "web" -o qutebrowser -c "web"
+bindsym $mod+q $circle -t qtcreator -o qtcreator -c "dev"
 #bindsym $mod+v $circle -t virt-manager -c " vm"
-bindsym $mod+v $circle -t vault -o vault -c " vault"
-bindsym $mod+d $circle -t drawio -o drawio -c " draw"
+bindsym $mod+v $circle -t vault -o vault -c "vault"
+bindsym $mod+d $circle -t drawio -o drawio -c "draw"
 bindsym $mod+1 $circle -t code -o code -c " dev"
-bindsym $mod+t $circle -t telegram-desktop -o telegram-desktop -c " tg"
+bindsym $mod+t $circle -t telegram-desktop -o telegram-desktop -c "tg"
 #bindsym $mod+f $circle -t nautilus -o nautilus -c " files"
-bindsym $mod+f $circle -t firefox -o firefox -c " web"
-bindsym $mod+e $circle -t evolution -o evolution -c "@ evo"
-bindsym $mod+o $circle -t wps -o wps -c " doc"
+bindsym $mod+f $circle -t "web" -o firefox -c "web"
+bindsym $mod+e $circle -t evolution -o evolution -c "evo"
+bindsym $mod+o $circle -t wps -o wps -c "doc"
 bindsym $mod+z $circle -t zoom -o zoom -c zoom
 bindsym $mod+p $circle -t postman -o postman -c postman
-bindsym $mod+Shift+w move container to workspace " web"
-bindsym $mod+Shift+x move container to workspace " term"
+bindsym $mod+Shift+w move container to workspace "web"
+bindsym $mod+Shift+x move container to workspace "term"
+bindsym $mod+Shift+t move container to workspace "tg"
+bindsym $mod+Shift+z move container to workspace "zoom"
 #bindsym $mod+e layout toggle split
 # screenshot
 bindsym $mod+Shift+p exec deepin-screenshot

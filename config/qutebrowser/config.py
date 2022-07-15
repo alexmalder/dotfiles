@@ -1,4 +1,6 @@
-# SETUP FONTS
+# pylint: disable=C0111
+c = c  # noqa: F821 pylint: disable=E0602,C0103
+config = config  # noqa: F821 pylint: disable=E0602,C0103
 c.fonts.hints = '11pt Iosevka Nerd Font'
 c.fonts.keyhint = '11pt Iosevka Nerd Font'
 c.fonts.prompts = '11pt Iosevka Nerd Font'
@@ -314,3 +316,5 @@ c.colors.webpage.bg = base00
 config.set('colors.webpage.darkmode.enabled', True)
 config.set('qt.highdpi', True)
 config.load_autoconfig()
+
+config.bind('<t>', 'spawn --userscript translate -s us -t ru')
